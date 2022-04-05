@@ -53,6 +53,7 @@ export class App extends Component {
       label="Select an author"
       description="Filter posts by author"
       variant="filled"
+      style={{ marginBottom: '10px' }}
       />
       {this.state.blogArray
       .filter((blog) => {
