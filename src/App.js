@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './App.css'
 import { Container, NativeSelect, Pagination, TextInput, Title } from '@mantine/core';
 import Blog from './components/Blog';
 
@@ -26,7 +27,7 @@ export class App extends Component {
   render() {
     return (
       <>
-      <Container>
+      <Container style={{ backgroundColor: '#FFF' }}>
       <Title order={1}>Blogger Assignment</Title>
       <TextInput
       placeholder="Search for a blog post"
@@ -70,11 +71,6 @@ export class App extends Component {
         if(this.state.search !== '' && blog.title.toLowerCase().includes(this.state.search.toLowerCase())){
           return true
         }
-        // if(this.state.author === '' || blog.author.includes(this.state.author)){
-        //   return true
-        // } else if (this.state.search === '' || blog.title.toLowerCase().includes(this.state.search.toLowerCase())) {
-        //   return true
-        // }
       })
       // .slice((this.state.page - 1) * 10, (this.state.page - 1) * 10 + 10)
       .map(({author, title, text, id, createdAt}) => {
